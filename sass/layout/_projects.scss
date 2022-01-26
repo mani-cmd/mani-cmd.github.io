@@ -1,0 +1,123 @@
+.projects {
+    width: 100%;
+    display: grid;
+
+    &__heading {
+        margin-bottom: 3.5rem;
+    }
+    &__item {
+        max-width: 24.9rem;
+        width: 27vw;
+        min-width: 16.25rem;
+        display: inline-block;
+        margin-block: 25px;
+        outline: 1px solid $text-clr;
+        padding: 0.6rem;
+        border-radius: 6px;
+        &--img {
+            width: 100%;
+            height: clamp(200px, 20vh, 270px);
+        }
+        &__title {
+            font-size: 22px;
+            line-height: 29px;
+            margin: 26px 0 0 0;
+            font-family: $heading-txt;
+            padding-left: 0.3rem;
+        }
+        .dis {
+            margin-top: 22px;
+            margin-bottom: 0.9rem;
+            font-family: $heading-txt;
+            font-size: 1.13rem;
+            font-weight: 500;
+            padding-left: 0.3rem;
+        }
+
+        &__details {
+            padding-inline-start: 1.4rem;
+            padding-inline-end: 0.3rem;
+            font-size: 1rem;
+            line-height: 150%;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.9rem;
+        }
+        &__links {
+            margin-left: 1.4rem;
+            margin-bottom: 0.6rem;
+
+            @media screen and (max-width: 1150px) {
+                margin-left: 0.4rem;
+            }
+
+            .projects_link {
+                will-change: transform;
+                transition: 0.2s $ease;
+
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                @media screen and (max-width: 1060px) {
+                    margin-right: 1rem;
+                }
+
+                .icon {
+                    background-color: $bg-clr-light;
+                    border-radius: 50%;
+                    outline: 1px solid #f5dce0;
+                    margin-right: 0.5rem;
+                    cursor: pointer;
+                    will-change: inherit;
+                    transition: inherit;
+                    width: 36px;
+                    height: 36px;
+                    position: relative;
+                    svg {
+                        display: inline-block;
+                        will-change: inherit;
+                        transition: inherit;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                .text {
+                    display: inline-block;
+                    color: $text-clr;
+                    font-size: 1.1em;
+                    will-change: inherit;
+                    transition: inherit;
+                }
+
+                &:hover,
+                &:active {
+                    .icon {
+                        outline: none;
+
+                        svg {
+                            width: 28px;
+                            height: 28px;
+
+                            path {
+                                fill: $accent-clr;
+                            }
+                        }
+                    }
+                    .text {
+                        // text-decoration: underline;
+                        color: $accent-clr;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.item__wraper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 2em;
+}

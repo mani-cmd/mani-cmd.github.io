@@ -1,0 +1,54 @@
+.socialConnections {
+    .icons_showCase {
+        margin-top: 5rem;
+
+        display: flex;
+        justify-content: space-around;
+        column-gap: 3.7rem;
+        flex-wrap: wrap;
+        margin-left: 1.5rem;
+        .icons {
+            display: inline-flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            transition: color, fill, transform 0.3s $ease;
+            margin: 0 2.5rem 3rem 0;
+            .icon {
+                display: inline-block;
+                width: 56px;
+                height: 56px;
+                outline: 2px solid $text-clr;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: color, fill, transform 0.3s $ease;
+
+                svg {
+                    width: 2.1rem;
+                    height: 2.1rem;
+                    position: absolute;
+                    transition: color, fill, transform 0.3s $ease;
+                }
+            }
+
+            &:hover {
+                .icon {
+                    outline: none;
+                    svg {
+                        transform: scale(1.4) rotateZ(12deg);
+                        path {
+                            fill: $accent-clr;
+                        }
+                    }
+                }
+
+                .platform {
+                    color: $accent-clr;
+                }
+            }
+        }
+    }
+}
