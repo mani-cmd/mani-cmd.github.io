@@ -1,0 +1,60 @@
+$para-txt: "Open Sans", sans-serif;
+$heading-txt: "Source Serif Pro", serif;
+$anime-duration: 0.5s;
+$anime-delay: 0.5s;
+$text-clr: #ffe9d6;
+$accent-clr: #f05454;
+$accent-clr-2: #ff7144;
+$ease: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+
+$bg-clr: #121212;
+$bg-clr-light: #fff00000;
+$bg-clr-light-2: #88304e;
+
+@keyframes slideUp {
+    from {
+        transform: translateY(1em);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+        transform: translateY(0);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes slideFromSide {
+    from {
+        transform: translateX(100%);
+        // clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        opacity: 1;
+    }
+}
+@keyframes slideDownText {
+    from {
+        transform: translateY(-1rem);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-28px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+    }
+}

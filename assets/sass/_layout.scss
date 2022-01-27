@@ -1,0 +1,33 @@
+@import "./layout/hero";
+@import "./layout/projects";
+@import "./layout/skills";
+@import "./layout/contacts";
+@import "./layout/socialConnections";
+
+footer {
+    background: #0f0f0f;
+    display: flex;
+
+    justify-content: center;
+    padding-block: 2.1rem;
+
+    & > div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        img {
+            display: inline-block;
+            padding-right: 0.8em;
+        }
+        p {
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 18px;
+
+            letter-spacing: 8px;
+            text-transform: uppercase;
+
+            color: #e87d5b;
+        }
+    }
+}
