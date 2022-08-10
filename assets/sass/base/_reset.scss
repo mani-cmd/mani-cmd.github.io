@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: $background;
+    box-sizing: border-box;
+    position: relative;
+    color: $bodycopy;
+    font-family: "Lato", sans-serif;
+}
+
+html {
+    scroll-padding: var(--nav-height);
+    scroll-behavior: smooth;
+}
+
+main.full-width {
+    margin-top: var(--nav-height);
+}
+
+// .full-width {
+//     height: 100vh;
+//     --outline-clr: #f34;
+//     margin-block: 20px;
+//     outline: var(--outline-clr) 5px solid;
+//     &:nth-child(even) {
+//         --outline-clr: #43f;
+//     }
+// }

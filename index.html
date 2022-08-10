@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <title>Portfolio testing</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>(⚈ ̫ ⚈) Hello</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
-        <h2>In 4 days</h2>
+        <header>
+            <nav class="nav">
+                <ul class="nav--list" id="nav--list">
+                    <li>
+                        <a href="#home" class="active" id="nav--link">Home</a>
+                    </li>
+                    <li><a href="#about" id="nav--link">About Me</a></li>
+                    <li><a href="#projects" id="nav--link">Projects</a></li>
+                    <li><a href="#contact" id="nav--link">Contact Me</a></li>
+                </ul>
+                <button
+                    aria-hidden="true"
+                    class="menu-icon"
+                    id="mobile-menu-btn"
+                >
+                    <div class="menu-icon--line-one"></div>
+                    <div class="menu-icon--line-two"></div>
+                    <div class="menu-icon--line-three"></div>
+                </button>
+            </nav>
+        </header>
+        <main id="home" data-index="0" class="full-width"></main>
+        <section id="about" data-index="1" class="full-width"></section>
+        <section id="projects" data-index="2" class="full-width"></section>
+        <section id="contact" data-index="3" class="full-width"></section>
+        <!-- Javascript -->
+        <script type="module" src="./main.js"></script>
     </body>
 </html>

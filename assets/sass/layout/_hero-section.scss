@@ -1,0 +1,57 @@
+header {
+    --opacity: 0.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    background: linear-gradient(
+        to right,
+        rgba(lighten($background, 2%), var(--opacity)),
+        rgba(lighten($background, 3%), var(--opacity)),
+        rgba(lighten($background, 4%), var(--opacity)),
+        rgba(lighten($background, 3%), var(--opacity)),
+        rgba(lighten($background, 2%), var(--opacity))
+    );
+    backdrop-filter: blur(10px);
+    opacity: 100%;
+}
+
+.nav {
+    max-width: $desktop-width;
+    width: 80%;
+    &--list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        li {
+            list-style: none;
+        }
+    }
+    .menu-icon {
+        display: none;
+    }
+    @media screen and (max-width: 573px) {
+        display: flex;
+        justify-content: flex-end;
+        ul {
+            display: none;
+        }
+        .menu-icon {
+            display: inline-block;
+        }
+    }
+}
+
+.nav--list.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0px;
+}
