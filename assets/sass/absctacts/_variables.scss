@@ -3,9 +3,11 @@ $background: hsla(0, 0%, 4%, 1);
 $bodycopy: hsl(0, 0%, 100%);
 
 $desktop-width: 1180px;
+$desktop-margin: 130px;
 $tab-width: 892px;
 $mobile-width: 284px;
 
+$gap: var(--gap, 40px);
 :root {
     --nav-height: 110px;
 }

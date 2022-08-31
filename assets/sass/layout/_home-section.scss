@@ -1,0 +1,71 @@
+.home {
+    display: flex;
+    margin-inline: $desktop-margin;
+    &__txt {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: $gap;
+        & p {
+            font-size: 24px;
+        }
+        &__heading {
+            font-size: 80px;
+            color: $bodycopy;
+            font-weight: 400;
+            line-height: 90%;
+            &--styled {
+                line-height: 100%;
+
+                font-size: 26px;
+                color: $accent;
+            }
+        }
+    }
+    &__btn {
+        &--main {
+            padding: 1em 1.4em;
+            margin-right: 24px;
+            @include buttonDefaults;
+            background-color: $accent;
+        }
+        &--ghost {
+            --border: 3px;
+            color: $accent;
+            padding: calc(1em - var(--border)) calc(1.4em - var(--border));
+            @include buttonDefaults;
+            border: var(--border) solid $accent;
+        }
+    }
+    &--image {
+        width: 50%;
+        display: inline-block;
+
+        picture {
+            svg {
+                width: 90%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        &__txt {
+            width: 100%;
+            align-items: center;
+            --gap: 20px;
+        }
+        &--image {
+            width: 70%;
+            display: inline-block;
+
+            picture {
+                svg {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
